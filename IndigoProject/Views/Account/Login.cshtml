@@ -1,0 +1,33 @@
+﻿@using IndigoProject.ViewModels.Account
+@model LoginVm
+
+<div style="display:flex; justify-content:center">
+    <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb--30 mb-lg--0" style="display:flex; justify-content:center">
+        <!-- Login Form -->
+        <form method="post" asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">
+            <div class="login-form">
+                <h4 class="login-title">New Customer</h4>
+                <p><span class="font-weight-bold">I am a new customer</span></p>
+                <div class="row">
+                    <div class="col-12 mb--20">
+                        <label asp-for="Email">Email</label>
+                        <input asp-for="Email" class="mb-0 form-control" type="email" id="email" placeholder="Enter Your Email Address Here.." />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-lg-6 mb--20">
+                        <label asp-for="Password">Password</label>
+                        <input asp-for="Password" class="mb-0 form-control" type="password" id="password" placeholder="Enter your password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="col-lg-6 mb--20">
+                        <label asp-for="RememberMe">Remember Me</label>
+                        <input asp-for="RememberMe" style="width: 200px; height: 200px; border-radius: 3px;" />
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-outlined">Login</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

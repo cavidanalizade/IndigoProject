@@ -1,0 +1,63 @@
+﻿@using IndigoProject.ViewModels.Account
+@model AppUserVM
+<div style="display:flex ; justify-content:center">
+
+	<div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb--30 mb-lg--0" style="display:flex ; justify-content:center">
+		<!-- Login Form s-->
+		<form method="post">
+			<div class="login-form">
+				<h4 class="login-title">New Customer</h4>
+				<p><span class="font-weight-bold">I am a new customer</span></p>
+				<div class="row">
+					<div class="col-md-12 col-12 mb--15">
+						<label asp-for="Name"> Name</label>
+						<input asp-for="Name" class="mb-0 form-control" type="text" id="name"
+							   placeholder="Enter your  name">
+						<span asp-validation-for="Name"></span>
+
+					</div>
+
+					<div class="col-md-12 col-12 mb--15">
+						<label asp-for="Surname">Surname</label>
+						<input asp-for="Surname" class="mb-0 form-control" type="text" id="name"
+							   placeholder="Enter your  surname">
+						<span asp-validation-for="Surname"></span>
+
+					</div>
+					<div class="col-md-12 col-12 mb--15">
+						<label asp-for="Username">Username</label>
+						<input asp-for="Username" class="mb-0 form-control" type="text" id="name"
+							   placeholder="Enter your  Username">
+						<span asp-validation-for="Username"></span>
+
+					</div>
+
+					<div class="col-12 mb--20">
+						<label asp-for="Email">Email</label>
+						<input asp-for="Email" class="mb-0 form-control" type="email" id="email" placeholder="Enter Your Email Address Here..">
+						<span asp-validation-for="Email"></span>
+
+					</div>
+					<div class="col-lg-6 mb--20">
+						<label asp-for="Password">Password</label>
+						<input asp-for="Password" class="mb-0 form-control" type="password" id="password" placeholder="Enter your password">
+						<span asp-validation-for="Password"></span>
+
+					</div>
+					<div class="col-lg-6 mb--20">
+						<label asp-for="RepeatPassword">Repeat Password</label>
+						<input asp-for="RepeatPassword" class="mb-0 form-control" type="password" id="repeat-password" placeholder="Repeat your password">
+						<span asp-validation-for="RepeatPassword"></span>
+					</div>
+					<div asp-validation-summary=All></div>
+
+					<div class="col-md-12">
+						<button type="submit" style="width:40px ; height:20px; border-radius:5px">Register</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</div>

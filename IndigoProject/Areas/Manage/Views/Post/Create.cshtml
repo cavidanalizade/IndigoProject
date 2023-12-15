@@ -1,0 +1,32 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@using IndigoProject.Areas.Manage.ViewModels
+@model CreatePostVM
+<div class="container" style="display:flex; justify-content:center; margin-left:300px ; margin-top:300px ; background-color:darkred">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input class="form-control" asp-for="Title">
+                <span asp-validation-for="Title" style="color:red"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea type="text" class="form-control" asp-for="Description"> </textarea>>
+                <span asp-validation-for="Description" style="color:red"></span>
+            </div>
+        </div>
+        <div class="row align-items-center ">
+        </div>
+        <div class="row align-items-center">
+            <div class="mb-3 col-md-4">
+                <label asp-for="Image" class="form-label">Image</label>
+                <input class="form-control" asp-for="Image">
+                <span asp-validation-for="Image" style="color:red"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
